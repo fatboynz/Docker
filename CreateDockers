@@ -11,3 +11,6 @@ sudo docker create --name=sonarrv3 -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Auckl
 
 ## Lidarr
 sudo docker create --name=lidarr -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Auckland -e UMASK_SET=022 -p 8686:8686 -v /home/jdip/lidarr/config:/config -v /srv/Music/Music/_FLAC/:/music -v /srv/Video/TVShows/NZB:/downloads --restart unless-stopped linuxserver/lidarr
+
+##airsonic 
+sudo docker create --name=airsonic -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Auckland -e UMASK_SET=022 -p 4040:4040 -v /home/jdip/airsonic/config:/config -v /srv/Music/Music/_FLAC/:/music -v /srv/Video/TVShows/NZB:/downloads --restart unless-stopped linuxserver/airsonic
