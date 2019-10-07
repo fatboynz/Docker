@@ -6,7 +6,7 @@ sudo docker create --name=radarr -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Aucklan
 sudo docker create --name=sonarr -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Auckland -e UMASK_SET=022 -p 8989:8989 -v /home/jdip/sonarr/config:/config -v /srv/Video/TVShows/:/tv -v /srv/Video/TVShows/NZB:/downloads --restart unless-stopped linuxserver/sonarr
 
 ## Sonarr-preview
-sudo docker create --name=sonarrv3 -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Auckland -e UMASK_SET=022 -p 8989:8989 -v /home/jdip/sonarrv3/config:/config -v /srv/Video/TVShows/:/tv -v /srv/Video/TVShows/NZB:/downloads --restart unless-stopped linuxserver/sonarr-preview
+sudo docker create --name=sonarrv3 -e PUID=1000 -e PGID=1000 -e TZ=Pacific/Auckland -e UMASK_SET=022 -p 8989:8989 -v /home/jdip/sonarrv3/config:/config -v /srv/Video/TVShows/:/tv -v /srv/Video/TVShows/NZB:/downloads --restart unless-stopped linuxserver/sonarr:preview
 
 
 ## Lidarr
